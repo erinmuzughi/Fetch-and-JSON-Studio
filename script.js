@@ -5,6 +5,9 @@ window.addEventListener("load", function (){
             data.sort(function(a, b){
                 return b.hoursInSpace - a.hoursInSpace
             });
+            const div = document.getElementById("container");
+         div.innerHTML =`<h3> Total Astronauts: ${data.length}</h3>`
+         
             for (let i = 0; i < data.length; i++){
                 const div = document.getElementById("container");
                 const astronautID = data[i].id;
